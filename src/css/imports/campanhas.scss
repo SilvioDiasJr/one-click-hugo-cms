@@ -1,0 +1,91 @@
+.campanhas {
+  width: 100%;
+  max-width: 1272px;
+  height: auto;
+
+  padding-bottom: 48px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 1.8rem;
+    color: var(--black);
+    font-weight: 700;
+
+    margin-bottom: 24px;
+  }
+
+  >div {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+  }
+}
+
+.campanhas.card {
+  flex: 1;
+  height: 35.1rem;
+
+  display: flex;
+  // align-items: center;
+  flex-direction: column;
+
+  padding: 0px 0px 16px;
+
+  box-shadow: 0px 15px 30px rgba(70, 73, 132, 0.15);
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  text-align: start;
+
+  img{
+    width: 100%;
+    height: 17.5rem;
+
+    object-fit: cover;
+
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    color: var(--black);
+    font-weight: 700;
+
+    margin-bottom: 8px;
+    padding: 0px 16px;
+  }
+
+  p {
+    font-size: 1.4rem;
+    color: var(--black);
+    font-weight: 400;
+
+    margin-bottom: 24px;
+    padding: 0px 16px;
+  }
+
+
+  a {
+    width: 10.7rem;
+    height: 3.9rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100px;
+    margin: 0px 16px;
+
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--white);
+    font-weight: 700;
+
+    background-color: var(--blue-button);
+  }
+}

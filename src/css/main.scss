@@ -87,4 +87,10 @@
 /* Uncomment out the line below to help debug layout issues */
 /*@use './imports/_debug';*/
 
-@use './imports/nav'
+@use './imports/nav';
+@use './imports/destaques';
+@use './imports/oportunidades';
+@use './imports/campanhas';
+@use './imports/lancamentos';
+@use './imports/footer';
+@use './imports/ultimas-noticias';

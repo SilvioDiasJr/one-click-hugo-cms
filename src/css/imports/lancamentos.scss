@@ -1,0 +1,104 @@
+.lancamentos {
+  width: 100%;
+  max-width: 1272px;
+  height: auto;
+
+  padding-bottom: 48px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 1.8rem;
+    color: var(--black);
+    font-weight: 700;
+
+    margin-bottom: 24px;
+  }
+
+  >div {
+    width: 100%;
+    min-height: 38.6rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+  }
+}
+
+.lancamentos.card {
+  flex: 1;
+  min-height: 100%;
+  
+
+  padding: 16px 0px 24px;
+
+  box-shadow: 0px 15px 30px rgba(70, 73, 132, 0.15);
+  border-radius: 16px;
+
+  span {
+    width: 10.2rem;
+    height: 3.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0px 8px 8px 0px;
+
+    font-size: 1.2rem;
+    color: var(--white);
+    font-weight: 700;
+
+    background-color: var(--blue-1);
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    color: var(--black);
+    font-weight: 700;
+
+    text-align: start;
+
+    padding: 24px 16px 8px;
+  }
+
+  p {
+    font-size: 1.4rem;
+    color: var(--black);
+    font-weight: 400;
+    text-align: start;
+
+    padding: 0px 16px 16px;
+  }
+
+  img{
+    width: 9.6rem;
+    height: 9.6rem;
+
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  a {
+    width: 10.7rem;
+    height: 3.9rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100px;
+
+    border: 1px solid var(--blue-4);
+
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--blue-button);
+    font-weight: 700;
+
+    margin: 0px 16px;
+
+    background-color: transparent;
+  }
+}

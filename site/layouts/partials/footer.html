@@ -1,51 +1,75 @@
-<footer class="bg-black ph3 pv4 white">
+<footer class="footer">
+	<div>
+		<div>
+			<ul>
+				<li><a href="/">INÍCIO</a></li>
+			</ul>
 
-	<div class="mw7 center pt3">
+			<ul>
+				<li><a href="#">SANTA CRUZ</a></li>
+				<li><a href="#">História</a></li>
+				<li><a href="#">Missão, Visão e Valores</a></li>
+				<li><a href="#">Código de Ética</a></li>
+			</ul>
 
-		<div class="measure-narrow center mb4">
-
-			<img src="/img/logo.svg" alt="Kaldi logo" class="db w4 center mb4 br0">
-			<p class="f3 lh-title light-gray b tc mb2">{{ .Site.Data.footer.title }}</p>
-			<p>{{ .Site.Data.footer.blurb }}</p>
-
-			{{ partial "newsletter-form" . }}
-
+			<ul>
+				<li><a href="#">ESTRUTURA</a></li>
+				<li><a href="#">Centro de Distribuição</a></li>
+				<li><a href="#">Área de Atuação</a></li>
+				<li><a href="#">Fale Conosco</a></li>
+				<li><a href="#">Tecnologia</a></li>
+			</ul>
 		</div>
 
-		<div class="flex-ns justify-between">
+		<div>
+			<ul>
+				<li><a href="#">PRODUTOS E SERVIÇOS</a></li>
+				<li><a href="#">Oportunidades</a></li>
+				<li><a href="#">Produtos</a></li>
+				<li><a href="#">Revista</a></li>
+				<li><a href="#">PLP</a></li>
+				<li><a href="#">Lançamentos</a></li>
+				<li><a href="#">Envio de Documentos</a></li>
+			</ul>
 
-			<div style="background-color: red;">
-				<h3 class="f4 b lh-title mb1 primary">Kaldi</h3>
-				<ul class="mb3">
-					<li><a href="/" class="">Home</a></li>
-					<li><a href="/products" class="">Our products</a></li>
-					<li><a href="/values" class="">About</a></li>
-					<li><a href="/post" class="">Blog</a></li>
-					<li><a href="/contact" class="">Contact</a></li>
-				</ul>
-			</div>
+			<ul>
+				<li><a href="#">FORÇA DE VENDAS</a></li>
+			</ul>
+		</div>
 
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Find out more</h3>
-				<ul class="mb3">
-					<li><a href="/post/jamaica-blue/" class="link">Latest offers</a></li>
-					<li><a href="/contact" class="link">Schedule an appointment</a></li>
-				</ul>
-			</div>
+		<div>
+			<ul>
+				<li><a href="#">PEDIDO ELETRÔNICO</a></li>
+				<li><a href="#">Download</a></li>
+				<li><a href="#">Suporte</a></li>
+				<li><a href="#">Como Podemos Ajudar?</a></li>
+				<li><a href="#">PLP</a></li>
+				<li><a href="#">NFe</a></li>
+				<li><a href="#">Devolução</a></li>
+			</ul>
 
-			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
-				<ul class="mhn2">
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook" "alt" "Kaldi on Facebook") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-twitter" "alt" "Kaldi on Twitter") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-instagram" "alt" "Kaldi on Instagram") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-vimeo" "alt" "Kaldi on Vimeo") }}
-				</ul>
-			</div>
+			<ul>
+				<li><a href="#">NOTÍCIAS</a></li>
+			</ul>
+		</div>
 
+		<div>
+			<ul>
+				<li><a href="#">TRABALHE CONOSCO</a></li>
+				<li><a href="#">Gente</a></li>
+				<li><a href="#">Desenvolvimento</a></li>
+				<li><a href="#">Depoimentos</a></li>
+				<li><a href="#">Trabalhe com a Gente</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<ul>
+				<li>CONTATO</li>
+				<li><a href="#">Entre em contato</a></li>
+			</ul>
 		</div>
 	</div>
 
+	<span>© Copyright 2008 - 2023 SantaCruz | Produzido por Add</span>
 </footer>
-
-{{ partial "svg" . }}
