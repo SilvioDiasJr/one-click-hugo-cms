@@ -36,19 +36,26 @@
         font-size: 1.4rem;
         color: var(--white);
         font-weight: 700;
+        text-decoration: none;
 
         margin-bottom: 19px;
 
-        
-        &:not(:first-of-type) {
-          font-weight: 400; 
-
-          margin-bottom: 8px;
-        }
-
         a {
+          font-size: 1.4rem;
+          color: var(--white);
+          font-weight: 700;
           text-decoration: none;
         }
+        
+        &:not(:first-of-type) {
+          margin-bottom: 8px;
+          
+          a {
+            font-weight: 400; 
+          }
+        }
+
+
       }
     }
   }
