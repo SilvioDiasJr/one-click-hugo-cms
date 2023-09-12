@@ -4,7 +4,7 @@
   <h1>Notícias anteriores</h1>
 
   <ul id="blog-list">
-    {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
+    {{ range (.Paginator 100).Pages.ByPublishDate.Reverse }}
     <li>
       {{ .Render "li"}}
     </li>
