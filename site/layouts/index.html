@@ -8,6 +8,31 @@
 
 {{ partial "lancamentos" .Params.blurb }}
 
-{{ partial "ultimas-noticias" .Params.blurb }}
+<div class="ultimas-noticias">
+  <div class="ultimas-noticias header">
+    <h1>ÚLTIMAS NOTÍCIAS</h1>
+
+    <a href="/post">Ver tudo</a>
+  </div>
+
+  <div class="ultimas-noticias list">
+    {{range (.Paginator 3).Pages.ByPublishDate.Reverse}}
+    <div class="ultimas-noticias background" style="background-image: url('{{ .Params.image }}');">
+      <div class="ultimas-noticias card">
+        <h2>{{ .Title }}</h2>
+
+        <p>
+          {{ .Description }}
+        </p>
+
+        <div>
+          <span>{{ .Date | time.Format ":date_short" }} às {{ dateFormat "15:04 " .Date.UTC }}</span>
+          <a href="{{ .RelPermalink }}">Ver mais</a>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
 
 {{ end }}

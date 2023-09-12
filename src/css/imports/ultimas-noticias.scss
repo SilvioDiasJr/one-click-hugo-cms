@@ -14,7 +14,34 @@
     margin-bottom: 24px;
   }
 
-  >div:first-of-type {
+  a {
+    width: 10.7rem;
+    height: 3.9rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100px;
+    margin: 0px 16px;
+
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--white);
+    font-weight: 700;
+
+    background-color: var(--blue-button);
+  }
+}
+
+.ultimas-noticias.header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.ultimas-noticias.list {
     width: 100%;
     
     display: flex;
@@ -22,10 +49,27 @@
     justify-content: space-between;
 
     gap: 24px;
-  }
+}
+
+.ultimas-noticias.background {
+  flex: 1;
+  max-width: 40.8rem;
+  height: 30.6rem;
+
+  border-radius: 16px;
+
+  background-size: cover;
+  background-position: center;
+
+  box-shadow: 0px 15px 30px rgba(70, 73, 132, 0.15);
+
 }
 
 .ultimas-noticias.card {
+  width: 100%;
+  height: 100%;
+
+  display: inherit;
   flex: 1;
   height: 30.6rem;
 
@@ -36,15 +80,10 @@
 
   padding: 0px 0px 16px;
 
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(to top,rgba(0,0,0, 0.8), rgba(0,0,0, 0.1));
 
-  box-shadow: 0px 15px 30px rgba(70, 73, 132, 0.15);
+  
   border-radius: 16px;
-
-  overflow: hidden;
-
-  text-align: start;
 
   h2 {
     font-size: 1.4rem;
@@ -53,6 +92,12 @@
 
     margin-bottom: 8px;
     padding: 0px 16px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   p {
@@ -62,47 +107,26 @@
 
     margin-bottom: 24px;
     padding: 0px 16px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.15);
   }
 
   div:first-of-type {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     span {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       color: var(--white);
       font-weight: 400;
   
-      margin-bottom: 24px;
       padding: 0px 16px;
     }
-  
-  
-    a {
-      width: 10.7rem;
-      height: 3.9rem;
-  
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      border-radius: 100px;
-      margin: 0px 16px;
-  
-      text-decoration: none;
-      font-size: 1.4rem;
-      color: var(--white);
-      font-weight: 700;
-  
-      background-color: var(--blue-button);
-    }
   }
-
-}
-
-.ultimas-noticias.card.gradient {
-  width: 100%;
-  height: 100%;
-
-  // background-color: red;
-
-  // background-color: linear-gradient(red, rgba(0,0,0,0.5));
 }

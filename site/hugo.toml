@@ -1,6 +1,6 @@
 baseurl = "/"
-languageCode = "en-us"
-languageLang = "en"
+languageCode = "pt_BR"
+languageLang = "pt-br"
 title = "Kaldi"
 
 # RSS, categories and tags disabled for an easy start

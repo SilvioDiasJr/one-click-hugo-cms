@@ -3,7 +3,7 @@
 
   <div>
     {{ range .Pages.ByPublishDate.Reverse }}
-    <li class="ultimas-noticias card" style="background-image: url('/img/tio-nacho.png');">
+    <div class="ultimas-noticias card" style="background-image: url('/img/tio-nacho.png');">
       <h2>{{ .Title }}</h2>
 
       <p>
@@ -14,7 +14,7 @@
         <span>HOJE ÀS 08:30</span>
         <a href="#">Assistir</a>
       </div>
-    </li>
+    </div>
     {{ end }}
 
     <!-- <div class="ultimas-noticias card" style="background-image: url('/img/tio-nacho.png');">
