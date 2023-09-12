@@ -1,0 +1,18 @@
+.button-link {
+  width: 10.7rem;
+  height: 3.9rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100px;
+  margin: 0px 16px;
+
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--white);
+  font-weight: 700;
+
+  background-color: var(--blue-button);
+}

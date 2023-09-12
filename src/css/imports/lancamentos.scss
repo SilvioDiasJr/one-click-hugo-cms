@@ -5,30 +5,38 @@
 
   padding-bottom: 48px;
   margin: 0 auto;
+}
+
+.lancamentos-header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
 
   h1 {
     font-size: 1.8rem;
     color: var(--black);
     font-weight: 700;
-
-    margin-bottom: 24px;
-  }
-
-  >div {
-    width: 100%;
-    min-height: 38.6rem;
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 24px;
   }
 }
 
-.lancamentos.card {
+.lancamentos-list {
+  width: 100%;
+  min-height: 38.6rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+.lancamentos-card {
   flex: 1;
-  min-height: 100%;
+  max-width: 19.2rem;
+  height: 100%;
   
 
   padding: 16px 0px 24px;
@@ -44,6 +52,8 @@
     align-items: center;
     justify-content: center;
 
+    margin-bottom: 16px;
+
     border-radius: 0px 8px 8px 0px;
 
     font-size: 1.2rem;
@@ -52,6 +62,7 @@
 
     background-color: var(--blue-1);
   }
+
 
   h2 {
     font-size: 1.4rem;
@@ -72,13 +83,6 @@
     padding: 0px 16px 16px;
   }
 
-  img{
-    width: 9.6rem;
-    height: 9.6rem;
-
-    margin: 0 auto;
-    text-align: center;
-  }
 
   a {
     width: 10.7rem;
@@ -100,5 +104,32 @@
     margin: 0px 16px;
 
     background-color: transparent;
+  }
+}
+
+.lancamentos-image {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    width: 9.6rem;
+    height: 9.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: var(--grey-2);
+    img{
+      width: 100%;
+      max-width: 6.4rem;
+      max-height: 6.4rem;
+
+      object-fit: contain;
+    }
   }
 }

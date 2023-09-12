@@ -48,13 +48,16 @@
       input {
         width: 25.6rem;
         height: 4.3rem;
+
+        padding: 16px;
         
         border: 1px solid var(--grey-2);
         border-radius: 32px;
 
         font-size: 1.4rem;
 
-        ::placeholder {
+        &::placeholder {
+          text-align: center;
           color: var(--grey-1);
         }
 

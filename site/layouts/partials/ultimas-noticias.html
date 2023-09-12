@@ -1,47 +1,26 @@
 <div class="ultimas-noticias">
-  <h1>ÚLTIMAS NOTÍCIAS</h1>
+  <div class="ultimas-noticias-header">
+    <h1>ÚLTIMAS NOTÍCIAS</h1>
 
-  <div>
-    {{ range .Pages.ByPublishDate.Reverse }}
-    <div class="ultimas-noticias card" style="background-image: url('/img/tio-nacho.png');">
-      <h2>{{ .Title }}</h2>
+    <a href="/post">Ver tudo</a>
+  </div>
 
-      <p>
-        “A perspectiva é que ainda em 2023 o mercado tenha um crescimento de 6% em valor”
-      </p>
+  <div class="ultimas-noticias list">
+    {{ range first 3 .Site.RegularPages.ByPublishDate.Reverse }}
+    <div class="ultimas-noticias background" style="background-image: url('{{ .Params.image }}');">
+      <div class="ultimas-noticias card">
+        <h2>{{ .Title }}</h2>
 
-      <div>
-        <span>HOJE ÀS 08:30</span>
-        <a href="#">Assistir</a>
+        <p>
+          {{ .Description }}
+        </p>
+
+        <div>
+          <span>{{ .Date | time.Format ":date_short" }} às {{ dateFormat "15:04 " .Date.UTC }}</span>
+          <a href="{{ .RelPermalink }}">Ver mais</a>
+        </div>
       </div>
     </div>
     {{ end }}
-
-    <!-- <div class="ultimas-noticias card" style="background-image: url('/img/tio-nacho.png');">
-      <h2>Farmácias: principal destino para a compra das categorias infantis</h2>
-
-      <p>
-        “A perspectiva é que ainda em 2023 o mercado tenha um crescimento de 6% em valor”
-      </p>
-
-      <div>
-        <span>HOJE ÀS 08:30</span>
-        <a href="#">Assistir</a>
-      </div>
-    </div>
-
-    <div class="ultimas-noticias card" style="background-image: url('/img/tio-nacho.png');">
-      <h2>Farmácias: principal destino para a compra das categorias infantis</h2>
-
-      <p>
-        “A perspectiva é que ainda em 2023 o mercado tenha um crescimento de 6% em valor”
-      </p>
-
-      <div>
-        <span>HOJE ÀS 08:30</span>
-        <a href="#">Assistir</a>
-      </div>
-    </div> -->
-
   </div>
 </div>

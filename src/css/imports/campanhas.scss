@@ -13,24 +13,24 @@
 
     margin-bottom: 24px;
   }
+}
 
-  >div {
+.campanhas-list {
     width: 100%;
     
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
 
     gap: 24px;
-  }
 }
 
-.campanhas.card {
+.campanhas-card {
   flex: 1;
+  max-width: 30rem;
   height: 35.1rem;
 
   display: flex;
-  // align-items: center;
   flex-direction: column;
 
   padding: 0px 0px 16px;
@@ -67,25 +67,5 @@
 
     margin-bottom: 24px;
     padding: 0px 16px;
-  }
-
-
-  a {
-    width: 10.7rem;
-    height: 3.9rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 100px;
-    margin: 0px 16px;
-
-    text-decoration: none;
-    font-size: 1.4rem;
-    color: var(--white);
-    font-weight: 700;
-
-    background-color: var(--blue-button);
   }
 }

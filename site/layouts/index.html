@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+{{partial "anuncios" .Params.blurb}}
+
 {{ partial "destaques" .Params.blurb}}
 
 {{ partial "oportunidades" .Params.blurb }}
@@ -9,16 +11,16 @@
 {{ partial "lancamentos" .Params.blurb }}
 
 <div class="ultimas-noticias">
-  <div class="ultimas-noticias header">
+  <div class="ultimas-noticias-header">
     <h1>ÚLTIMAS NOTÍCIAS</h1>
 
     <a href="/post">Ver tudo</a>
   </div>
 
-  <div class="ultimas-noticias list">
+  <div class="ultimas-noticias-list">
     {{range (.Paginator 3).Pages.ByPublishDate.Reverse}}
-    <div class="ultimas-noticias background" style="background-image: url('{{ .Params.image }}');">
-      <div class="ultimas-noticias card">
+    <div class="ultimas-noticias-background" style="background-image: url('{{ .Params.image }}');">
+      <div class="ultimas-noticias-card">
         <h2>{{ .Title }}</h2>
 
         <p>
