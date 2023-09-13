@@ -20,6 +20,10 @@
     color: var(--black);
     font-weight: 700;
   }
+
+  a {
+    gap: 14px;
+  }
 }
 
 .lancamentos-list {
@@ -84,13 +88,14 @@
   }
 
 
-  a {
-    width: 10.7rem;
+  >a {
+    width: 12rem;
     height: 3.9rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 14px;
 
     border-radius: 100px;
 

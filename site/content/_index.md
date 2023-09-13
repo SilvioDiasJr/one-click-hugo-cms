@@ -1,6 +1,6 @@
 ---
-title: Santa Cruz
-subtitle: Desenvolvedor Front-end
+title: Home
+subtitle: Santa Cruz
 image: img/gradient-2.jpg
 blurb:
   heading: Why Kaldi?
