@@ -4,10 +4,9 @@
   <div class="posts single sections">
     <section>
       <h1>{{.Title}}</h1>
-      <div>
-        <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-        <p>Read in {{ .ReadingTime }} minutes</p>
-      </div>
+
+      <span>{{ .Date | time.Format ":date_short" }} às {{ dateFormat "15:04 " .Date.UTC }}</span>
+
       <div class="cms">
         <p>
           {{ .Description }}
@@ -18,7 +17,28 @@
     </section>
 
     <section>
-      <h1>Últimas notícias</h1>
+      <div class="post-single-list">
+        <ul id="blog-list">
+          <h1>Últimas notícias</h1>
+          {{ range first 3 .Site.RegularPages.ByPublishDate.Reverse }}
+          <li>
+            <a href="{{ .RelPermalink }}">
+              {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}"
+                style="width: 10.4rem;height: 10.4rem;" />{{ end }}
+              <div>
+                <h2>{{ .Title }}</h2>
+                <p>{{ .Description }}</p>
+                <span>{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+              </div>
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+        <a href="/post">
+          Ver mais
+          <img src="/img/arrow_back_ios.svg" alt="Icone de seta">
+        </a>
+      </div>
     </section>
   </div>
 </div>
@@ -27,7 +47,10 @@
   <div class="ultimas-noticias-header">
     <h1>ÚLTIMAS NOTÍCIAS</h1>
 
-    <a href="/post">Ver tudo</a>
+    <a href="/post">
+      Ver tudo
+      <img src="/img/arrow-back-white.svg" alt="Icone de seta">
+    </a>
   </div>
 
   <div class="ultimas-noticias-list">

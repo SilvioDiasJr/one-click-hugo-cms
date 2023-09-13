@@ -3,6 +3,6 @@
 	<div>
 		<h2>{{ .Title }}</h2>
 		<p>{{ .Description }}</p>
-		<span>{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+		<span>{{ .Date | time.Format ":date_short" }} às {{ dateFormat "15:04 " .Date.UTC }}</span>
 	</div>
 </a>
