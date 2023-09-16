@@ -9,26 +9,30 @@
   </div>
 
   <div class="lancamentos-list">
+
+    {{ range first 6 (where .Site.RegularPages.ByPublishDate.Reverse "Section" "lancamentos") }}
     <div class="lancamentos-card">
-      <span>Cód.: 716713</span>
+      <span>Cód.: {{ .Code }}</span>
 
       <div class="lancamentos-image">
         <div>
-          <img src="/img/eucerin.png" alt="Imagem do produto EUCERIN HYAL-FILL DB GEL CR 50G">
+          <img src="{{ .Params.image }}" alt="{{ Params.title }}">
         </div>
       </div>
 
-      <h2>EUCERIN HYAL-FILL DB GEL CR 50G</h2>
+      <h2>{{ .Title }}</h2>
 
-      <p>Produto de uso noturno que ajuda a preencher as rugas mais profundas com u...</p>
+      <p>{{ .Description }}</p>
 
       <a href="#">
         ver mais
         <img src="/img/arrow-expand.svg" alt="Icone de expandir">
       </a>
     </div>
+    {{ end }}
 
-    <div class="lancamentos-card">
+
+    <!-- <div class="lancamentos-card">
       <span>Cód.: 716713</span>
 
       <div class="lancamentos-image">
@@ -121,7 +125,7 @@
         ver mais
         <img src="/img/arrow-expand.svg" alt="Icone de expandir">
       </a>
-    </div>
+    </div> -->
   </div>
 
 </div>
