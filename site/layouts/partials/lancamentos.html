@@ -12,7 +12,7 @@
 
     {{ range first 6 (where .Site.RegularPages.ByPublishDate.Reverse "Section" "lancamentos") }}
     <div class="lancamentos-card">
-      <span>Cód.: {{ .Code }}</span>
+      <span>Cód.: {{ .Params.code }}</span>
 
       <div class="lancamentos-image">
         <div>

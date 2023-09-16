@@ -20,7 +20,7 @@
       <div class="post-single-list">
         <ul id="blog-list">
           <h1>Últimas notícias</h1>
-          {{ range first 3 .Site.RegularPages.ByPublishDate.Reverse }}
+          {{ range first 3 (where .Site.RegularPages.ByPublishDate.Reverse "Section" "noticias") }}
           <li>
             <a href="{{ .RelPermalink }}">
               {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}"
@@ -54,7 +54,7 @@
   </div>
 
   <div class="ultimas-noticias-list">
-    {{ range first 3 .Site.RegularPages.ByPublishDate.Reverse }}
+    {{ range first 3 (where .Site.RegularPages.ByPublishDate.Reverse "Section" "noticias") }}
     <div class="ultimas-noticias-background" style="background-image: url('{{ .Params.image }}');">
       <div class="ultimas-noticias-card">
         <h2>{{ .Title }}</h2>

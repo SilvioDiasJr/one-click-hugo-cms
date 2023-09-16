@@ -6,7 +6,7 @@
   </div>
 
   <div class="ultimas-noticias-list">
-    {{ range first 3 .Site.RegularPages.ByPublishDate.Reverse }}
+    {{ range first 3 (where .Site.RegularPages.ByPublishDate.Reverse "Section" "noticias") }}
     <div class="ultimas-noticias-background" style="background-image: url('{{ .Params.image }}');">
       <div class="ultimas-noticias-card">
         <h2>{{ .Title }}</h2>
