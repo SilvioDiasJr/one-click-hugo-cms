@@ -1,6 +1,8 @@
 {{ define "main" }}
 
-{{partial "anuncios" .Params.blurb}}
+<div class="anuncios">
+  {{ partial "carousel.html" (dict "context" . "items" "1" "height" "31.2" "unit" "rem" "duration" "7000") }}
+</div>
 
 {{ partial "destaques" .Params.blurb}}
 
