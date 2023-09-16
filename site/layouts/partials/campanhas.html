@@ -2,7 +2,7 @@
   <h1>CAMPANHAS</h1>
 
   <div class="campanhas-list">
-    {{ range first 2 (where .Site.RegularPages "Section" "campanhas") }}
+    {{ range first 3 (where .Site.RegularPages.ByPublishDate.Reverse "Section" "campanhas") }}
     <div class="campanhas-card">
       <img src="{{ .Params.image }}" alt="Imagem da campanha Tio Nacho">
 
