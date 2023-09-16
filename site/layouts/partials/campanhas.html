@@ -2,35 +2,20 @@
   <h1>CAMPANHAS</h1>
 
   <div class="campanhas-list">
+    {{ range first 2 (where .Site.RegularPages "Section" "campanhas") }}
     <div class="campanhas-card">
-      <img src="/img/tio-nacho.png" alt="Imagem da campanha Tio Nacho">
+      <img src="{{ .Params.image }}" alt="Imagem da campanha Tio Nacho">
 
-      <h2>Tio Nacho</h2>
+      <h2>{{ .Title }}</h2>
 
-      <p>Cabelo saudável com poder da geleia real Tio Nacho.</p>
+      <p>{{ .Description }}</p>
 
-      <a class="button-link" href="#">Assistir</a>
+      <a class="button-link" href="{{ .Params.link }}">Assistir</a>
     </div>
+    {{ end }}
 
-    <div class="campanhas-card">
-      <img src="/img/forteviron.png" alt="Imagem da campanha Forteviron Anti-age">
 
-      <h2>Forteviron Anti-age</h2>
 
-      <p>Você melhor a cada dia!</p>
-
-      <a class="button-link" href="#">Assistir</a>
-    </div>
-
-    <div class="campanhas-card">
-      <img src="/img/Neutrogena.png" alt="Imagem da campanha">
-
-      <h2>Neutrogena</h2>
-
-      <p>Um novo SkinCare é possível. Não é achismo, é ciência.</p>
-
-      <a class="button-link" href="#">Assistir</a>
-    </div>
 
     <div class="campanhas-card">
       <img src="/img/campanhas.png" alt="Imagem das campanha">
