@@ -1,26 +1,23 @@
 {{ define "main" }}
 
-<div class="content-wrapper">
-  <main>
-    <div id="search-results"></div>
-    <div class="search-loading">Searching...</div>
+<div class="search">
+  <h1>Resultados</h1>
+  <div>
+    <div id="search-results" style="width: 100%;"></div>
+    <div class="search-loading">Pesquisando...</div>
 
     <script id="search-result-template" type="text/x-js-template">
-      <div id="summary-${key}">
-      <h3><a href="${link}">${title}</a></h3>
+      <a href="${link}" id="summary-${key}" class="search-card">
+      <h2>${title}</h2>
       <p>${snippet}</p>
-      <p>
-          <small>
-              ${ isset categories }Categories: ${categories}<br>${ end }
-          </small>
-      </p>
-  </div>
+      
+    </a>
   </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
     <script src="/search.js"></script>
 
-  </main>
+  </div>
 </div>
 {{ end }}

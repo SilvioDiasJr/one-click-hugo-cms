@@ -38,7 +38,9 @@ if (inputBox !== null) {
     inputBox.value = searchQuery || "";
     executeSearch(searchQuery, false);
   } else {
-    document.getElementById("search-results").innerHTML = '<p class="search-results-empty">Please enter a word or phrase above, or see <a href="/tags/">all tags</a>.</p>';
+    document.getElementById("search-results").innerHTML = '<p class="search-results-empty">Nenhum resultado encontrado</p>';
+
+    hide(document.querySelector(".search-loading"));
   }
 }
 
@@ -58,7 +60,7 @@ function executeSearch(searchQuery) {
         if (result.length > 0) {
           populateResults(result);
         } else {
-          document.getElementById("search-results").innerHTML = '<p class=\"search-results-empty\">No matches found</p>';
+          document.getElementById("search-results").innerHTML = '<p class=\"search-results-empty\">Nenhum resultado encontrado</p>';
         }
         hide(document.querySelector(".search-loading"));
       })
@@ -93,10 +95,12 @@ function populateResults(results) {
       });
     }
 
+    const pathname = value.item.permalink.split("/")[1];
+
     var output = render(templateDefinition, {
       key: key,
       title: value.item.title,
-      link: value.item.permalink,
+      link: pathname !== "noticias" ? "/#" : value.item.permalink,
       tags: tags,
       categories: value.item.categories,
       snippet: snippet
